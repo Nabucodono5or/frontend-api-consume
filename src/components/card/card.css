@@ -2,6 +2,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
   border-radius: 9px;
   width: 13rem;
+  position: relative;
   background-color: #2b2d42;
 }
 
@@ -36,4 +37,27 @@
 
 .text-card-dest{
     font-weight: 600;
+}
+
+.badge-remove{
+    position: absolute;
+    right: 0;
+    display: block;
+    text-align: center;
+    width: 0.7rem;
+    height: 0.7rem;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgb(240, 248, 255, 0.5);
+}
+
+.badge-edit{
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 0.7rem;
+    height: 0.7rem;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgb(240, 248, 255, 0.5);
 }
