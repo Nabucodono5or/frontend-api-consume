@@ -9,6 +9,12 @@ function NavBar() {
       <h1 className="navbar-title" onClick={() => navigate("/")}>
         Livraria Nabucodonosor
       </h1>
+      <button
+        className="submit-button button-create-livro"
+        onClick={() => navigate("/new")}
+      >
+        Novo Livro
+      </button>
     </nav>
   );
 }
