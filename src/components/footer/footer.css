@@ -1,0 +1,13 @@
+.footer-block {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #2b2d42;
+  height: 10rem;
+  padding-top: 1rem;
+}
+
+.footer-text {
+  margin: 2rem;
+  color: #bfc0c0;
+}

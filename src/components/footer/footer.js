@@ -1,7 +1,11 @@
 import "./footer.css";
 
 function Footer() {
-  return <h2>Aqui será o footer</h2>;
+  return (
+    <footer className="footer-block">
+      <small className="footer-text">Jefferson Abreu - 2022</small>
+    </footer>
+  );
 }
 
 export default Footer;
