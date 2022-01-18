@@ -4,3 +4,7 @@
   color: #bfc0c0;
   background-color: #2b2d42;
 }
+
+.navbar-title{
+  cursor: pointer;
+}
