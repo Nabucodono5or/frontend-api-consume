@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/navabar/navbar";
 import Home from "./components/home/home";
 import Footer from "./components/footer/footer";
+import EditLivro from './components/edit/editLivro';
 import ErrorPage from "./components/errorPage/errorpage";
 import "./App.css";
 
@@ -12,6 +13,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/edit/:id" element={<EditLivro />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 

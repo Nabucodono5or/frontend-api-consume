@@ -1,14 +1,18 @@
 import "./card.css";
+import { useNavigate } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
 import { AiOutlineEdit } from "react-icons/ai";
 
 function Card() {
+  const id = 1;
+  let navigate = useNavigate();
+  
   return (
     <div className="card">
       <div className="badge-remove">
         <BsTrash />
       </div>
-      <div className="badge-edit">
+      <div className="badge-edit" onClick={() => navigate(`/edit/${id}`)}>
         <AiOutlineEdit />
       </div>
       <img

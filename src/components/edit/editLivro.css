@@ -1,0 +1,49 @@
+.form-edit {
+  background-color: #2b2d42;
+  margin: 4rem auto 4rem;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form-block-input {
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-block-input > input {
+  height: 1.7rem;
+  width: 17rem;
+}
+
+.form-label {
+  color: #bfc0c0;
+  font-size: 1.2rem;
+}
+
+.button-block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.submit-button {
+  margin-top: 0.5rem;
+  background-color: #ef8354;
+  height: 2.5rem;
+  border-radius: 5px;
+  border-width: 0;
+  cursor: pointer;
+  width: 8rem;
+  color: #ffffff;
+}
+
+.submit-button:hover{
+    background-color: #bc3908;
+    color: #bfc0c0;
+}

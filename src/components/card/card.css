@@ -6,9 +6,9 @@
   background-color: #2b2d42;
 }
 
-.image-card{
-    width: 100%;
-    margin: 0;
+.image-card {
+  width: 100%;
+  margin: 0;
 }
 
 .footer-card {
@@ -19,45 +19,53 @@
   text-align: center;
 }
 
-.card-title{
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.4rem;
+.card-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.4rem;
 }
 
-.card-author{
-    font-size: 1rem;
+.card-author {
+  font-size: 1rem;
 }
 
 .pages-price-block {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 0.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.8rem;
 }
 
-.text-card-dest{
-    font-weight: 600;
+.text-card-dest {
+  font-weight: 600;
 }
 
-.badge-remove{
-    position: absolute;
-    right: 0;
-    display: block;
-    text-align: center;
-    width: 0.7rem;
-    height: 0.7rem;
-    padding: 1rem;
-    cursor: pointer;
-    background-color: rgb(240, 248, 255, 0.5);
+.badge-remove {
+  position: absolute;
+  right: 0;
+  display: block;
+  text-align: center;
+  width: 0.7rem;
+  height: 0.7rem;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: rgb(240, 248, 255, 0.5);
 }
 
-.badge-edit{
-    position: absolute;
-    display: block;
-    text-align: center;
-    width: 0.7rem;
-    height: 0.7rem;
-    padding: 1rem;
-    cursor: pointer;
-    background-color: rgb(240, 248, 255, 0.5);
+.badge-edit {
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 0.7rem;
+  height: 0.7rem;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: rgb(240, 248, 255, 0.5);
+}
+
+.badge-remove:hover {
+  background-color: rgb(240, 248, 255, 0.9);
+}
+
+.badge-edit:hover {
+  background-color: rgb(240, 248, 255, 0.9);
 }
