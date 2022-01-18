@@ -1,5 +1,12 @@
+import Card from "../card/card";
+import "./home.css";
+
 function Home() {
-  return <h1>Hello World</h1>;
+  return (
+    <div className="home">
+      <Card />
+    </div>
+  );
 }
 
 export default Home;
