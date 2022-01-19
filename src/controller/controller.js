@@ -2,15 +2,22 @@ import axios from "axios";
 
 const url = "http://localhost:5000/api";
 
-const getLivros = () => {
-  axios
-    .get(url + "/livros")
-    .then((response) => {
-      const data = response.data;
-      console.log(data);
-    })
-    .catch((error) => console.log(error));
-};
+const client = axios.create({
+  baseURL: url,
+});
+
+// const getLivros = () => {
+//   axios
+//     .get(url + "/livros")
+//     .then((response) => {
+//       const data = response.data;
+//       console.log(data);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//       return error;
+//     });
+// };
 
 const addLivro = (newLivro) => {
   axios
@@ -27,7 +34,7 @@ const updateLivro = (id, updateData) => {
   axios
     .put(`${url}/livro/update/${id}`, updateData)
     .then((response) => {
-      console.log(responde.data);
+      console.log(response.data);
     })
     .catch((error) => {
       console.log(error);
@@ -57,4 +64,5 @@ const getLivro = (id) => {
     });
 };
 
-export { getLivros, addLivro, updateLivro, deleteLivro, getLivro };
+// export { getLivros, addLivro, updateLivro, deleteLivro, getLivro };
+export default client;
