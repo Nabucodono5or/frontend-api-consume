@@ -45,4 +45,16 @@ const deleteLivro = (id) => {
     });
 };
 
-export { getLivros, addLivro, updateLivro, deleteLivro };
+const getLivro = (id) => {
+  axios
+    .get(`${url}/livro/${id}`)
+    .then((response) => {
+      const data = response.data;
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export { getLivros, addLivro, updateLivro, deleteLivro, getLivro };
