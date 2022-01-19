@@ -1,13 +1,38 @@
 import "./editLivro.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import client from "../../service/service";
 
 function EditLivro() {
-  const [titulo, setTitulo] = useState("Duna");
-  const [autor, setAutor] = useState("Frank Herbert");
-  const [editora, setEditora] = useState("Leya");
-  const [imagem, setImagem] = useState("Nenhum");
-  const [paginas, setPaginas] = useState(600);
-  const [preco, setPreco] = useState(32.33);
+  const { id } = useParams();
+  const [titulo, setTitulo] = useState("");
+  const [autor, setAutor] = useState("");
+  const [editora, setEditora] = useState("");
+  const [imagem, setImagem] = useState("");
+  const [paginas, setPaginas] = useState(0);
+  const [preco, setPreco] = useState(0.0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    client
+      .get(`/livro/${id}`)
+      .then((response) => {
+        const livro = response.data;
+        setValues(livro);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  function setValues(livro) {
+    setTitulo(livro.titulo);
+    setAutor(livro.autor);
+    setEditora(livro.editora);
+    setImagem(livro.imagem);
+    setPaginas(livro.paginas);
+    setPreco(livro.preco);
+  }
 
   function handleInputChange(event, set) {
     const target = event.target;
@@ -23,7 +48,17 @@ function EditLivro() {
       paginas: parseInt(paginas),
       preco: parseFloat(preco),
     };
-    console.log(changes);
+
+    client
+      .put(`/livro/update/${id}`, changes)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    navigate("/");
   }
 
   return (

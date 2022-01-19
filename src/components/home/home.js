@@ -1,10 +1,12 @@
 import Card from "../card/card";
 import { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import client from "../../service/service";
 import "./home.css";
 
-function Home() {
+function Home(props) {
   const [livros, setLivros] = useState([]);
+  let change = true;
 
   useEffect(() => {
     client
@@ -17,13 +19,14 @@ function Home() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [change]);
 
   const cards = livros.map((item) => {
     console.log(item);
     return <Card key={item.id} item={item} />;
   });
 
+  change = false;
   return <div className="home">{cards}</div>;
 }
 
