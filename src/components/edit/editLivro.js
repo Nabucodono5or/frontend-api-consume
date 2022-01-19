@@ -23,7 +23,7 @@ function EditLivro() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [id]);
 
   function setValues(livro) {
     setTitulo(livro.titulo);

@@ -35,7 +35,7 @@ function Card(props) {
         <img
           className="image-card"
           src={
-            imagem != "Nenhum"
+            imagem !== "Nenhum"
               ? imagem
               : "https://images-na.ssl-images-amazon.com/images/I/51mqUvezh2L._SX348_BO1,204,203,200_.jpg"
           }
