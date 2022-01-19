@@ -1,6 +1,6 @@
 import Card from "../card/card";
 import { useState, useEffect } from "react";
-import client from "../../controller/controller";
+import client from "../../service/service";
 import "./home.css";
 
 function Home() {

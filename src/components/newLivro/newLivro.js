@@ -1,5 +1,7 @@
 import "./newLivro.css";
 import { useState } from "react";
+import client from "../../service/service";
+import { useNavigate } from "react-router-dom";
 
 function NewLivro() {
   const [titulo, setTitulo] = useState("");
@@ -8,6 +10,7 @@ function NewLivro() {
   const [imagem, setImagem] = useState("");
   const [paginas, setPaginas] = useState(0);
   const [preco, setPreco] = useState(0.0);
+  const navigate = useNavigate();
 
   function handleInputChange(event, set) {
     const target = event.target;
@@ -23,7 +26,19 @@ function NewLivro() {
       paginas: parseInt(paginas),
       preco: parseFloat(preco),
     };
+
     console.log(livro);
+
+    client
+      .post("/livro", livro)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    navigate("/");
   }
 
   return (
