@@ -12,6 +12,10 @@
 - Edição das informações de venda do livro
 - A remoção de livros da coleção.
 
+Para Fazer:
+- [ ] Melhorar resposta da interface para atualizações.
+- [ ] Criar sistema de login no firebase.
+
 ### Como rodar a aplicação
 
 Para executar a aplicação você precisará ter a versão node mais recente. Então no terminal do seu computador clone o projeto:
