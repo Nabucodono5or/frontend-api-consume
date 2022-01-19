@@ -35,9 +35,9 @@ function Card(props) {
         <img
           className="image-card"
           src={
-            imagem !== "Nenhum"
+            imagem !== ""
               ? imagem
-              : "https://images-na.ssl-images-amazon.com/images/I/51mqUvezh2L._SX348_BO1,204,203,200_.jpg"
+              : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.Wkli1hypk6xKD4unn2lrMgHaJ4%26pid%3DApi&f=1"
           }
           alt="Imagem do livro"
         ></img>

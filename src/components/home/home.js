@@ -5,7 +5,6 @@ import "./home.css";
 
 function Home(props) {
   const [livros, setLivros] = useState([]);
-  let change = true;
 
   useEffect(() => {
     client
@@ -18,14 +17,13 @@ function Home(props) {
       .catch((error) => {
         console.log(error);
       });
-  }, [change]);
+  }, []);
 
   const cards = livros.map((item) => {
     console.log(item);
     return <Card key={item.id} item={item} />;
   });
 
-  change = false;
   return <div className="home">{cards}</div>;
 }
 
